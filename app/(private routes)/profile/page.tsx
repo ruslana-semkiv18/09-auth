@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "User Profile | NoteHub",
     description: "User Profile in NoteHub",
-    url: "https://08-zustand-beta-tan.vercel.app/profile",
+    url: "https://09-auth-sandy-two.vercel.app/profile",
     images: [
       {
         url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",

@@ -36,7 +36,7 @@ export const getMe = async (): Promise<User> => {
   return data;
 };
 
-export const updateMe = async (user: { username: string; email: string }) => {
+export const updateMe = async (user: { username: string }) => {
   const { data } = await api.patch<User>("/users/me", user);
   return data;
 };

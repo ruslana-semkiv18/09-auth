@@ -24,8 +24,8 @@ const createServerApi = async () => {
 // AUTH
 export const checkSessionServer = async () => {
   const api = await createServerApi();
-  const { data } = await api.get("/auth/session");
-  return data;
+  const res = await api.get("/auth/session");
+  return res;
 };
 
 export const getMeServer = async (): Promise<User> => {

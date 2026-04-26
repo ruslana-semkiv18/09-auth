@@ -13,10 +13,8 @@ export default function EditProfilePage() {
 
   const handleSubmit = async (formData: FormData) => {
     const newUserName = formData.get("username") as string;
-    const newEmail = user?.email as string;
     const updatedUser = await updateMe({
       username: newUserName,
-      email: newEmail,
     });
     setUser(updatedUser);
     router.push("/profile");

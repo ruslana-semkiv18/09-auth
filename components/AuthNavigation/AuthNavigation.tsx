@@ -7,12 +7,12 @@ import { useRouter } from "next/navigation";
 import css from "./AuthNavigation.module.css";
 
 export default function AuthNavigation() {
-  const { user, isAuthenticated, clearAuth } = useAuthStore();
+  const { user, isAuthenticated, clearIsAuthenticated } = useAuthStore();
   const router = useRouter();
 
   const handleLogout = async () => {
     await logout();
-    clearAuth();
+    clearIsAuthenticated();
     router.push("/sign-in");
   };
 

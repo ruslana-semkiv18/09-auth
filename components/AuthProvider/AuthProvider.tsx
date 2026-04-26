@@ -9,14 +9,14 @@ export default function AuthProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const { setUser, clearAuth } = useAuthStore();
+  const { setUser, clearIsAuthenticated } = useAuthStore();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     checkSession()
       .then((user) => {
         if (user) setUser(user);
-        else clearAuth();
+        else clearIsAuthenticated();
       })
       .finally(() => setLoading(false));
   }, []);

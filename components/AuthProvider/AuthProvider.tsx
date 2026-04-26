@@ -19,7 +19,7 @@ export default function AuthProvider({
         else clearIsAuthenticated();
       })
       .finally(() => setLoading(false));
-  }, [setUser, clearIsAuthenticated]);
+  }, []);
 
   if (loading) return <p>Loading...</p>;
 
